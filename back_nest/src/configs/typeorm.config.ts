@@ -12,6 +12,7 @@ export const typeORMConfig: TypeOrmModuleOptions = {
     //   rejectUnauthorized: false,
     // },
   },
-  entities: [__dirname + '/../{src,dist}/**/**/*{.ts,.js}'],
+  entities: [__dirname + '/../{src,dist}/**/entities/*{.ts,.js}'],
   synchronize: true,
+  autoLoadEntities: true,
 };

@@ -1,8 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './entities/auth.entity';
 import { Repository } from 'typeorm';
-import { CreateUserDto } from './dto/./create-user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
 export class AuthService {
@@ -11,10 +11,19 @@ export class AuthService {
     private userRepository: Repository<UserEntity>,
   ) {}
 
-  async create(createUserDto: CreateUserDto): Promise<boolean> {
-    const result = await this.userRepository.create(createUserDto);
+  getHelloWorld(): string {
+    return 'Hello World!!';
+  }
+
+  async create(createUserDto: CreateUserDto) {
+    console.log('test : 빽단 도착');
+    const result = await this.userRepository.findOneBy({
+      id: createUserDto.id,
+    });
     if (!(result === null)) {
-      return true;
+      return null;
+    } else {
+      return this.userRepository.create(createUserDto);
     }
   }
 
