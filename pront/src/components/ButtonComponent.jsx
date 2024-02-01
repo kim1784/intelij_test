@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Button.scss'
 
-const Button = ({ btnUseYN, buttonSize, buttonColor, buttonName, action } : any) => {
+const ButtonComponent= ({ btnUseYN, buttonSize, buttonColor, buttonName, action }) => {
     return (
         <button
             onClick={() => action()}
@@ -13,4 +13,4 @@ const Button = ({ btnUseYN, buttonSize, buttonColor, buttonName, action } : any)
     );
 }
 
-export default Button;
+export default ButtonComponent;

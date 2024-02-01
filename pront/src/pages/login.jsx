@@ -1,23 +1,20 @@
-import React, {ReactElement, useEffect, useState} from "react";
+import React, {useState} from "react";
 import axios from "axios";
-import {Link, useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { PRI_PATH } from "../constants/path"
 
-
-const LoginComponent = (): ReactElement => {
+const LoginComponent = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("")
 
     const Navigate = useNavigate();
 
-    // useEffect(() => {
-    //     axios.get('/auth/login')
-    //         .then(res => console.log(res))
-    //         .catch()
-    // }, []);
+    const movesignUp = () => {
+        Navigate("/signup")
+    }
 
 
-
-    const handleLogin = (e: any) => {
+    const handleLogin = (e) => {
         e.preventDefault();
         if (!username) {
             alert("id를 입력해주세요")
@@ -25,7 +22,7 @@ const LoginComponent = (): ReactElement => {
             alert("pass를 입력해주세요")
         } else {
 
-            axios.put("/auth/login", {
+            axios.put(PRI_PATH+"user/login/", {
                 params: {
                     "id": username,
                     "pw": password
@@ -76,9 +73,10 @@ const LoginComponent = (): ReactElement => {
 
                 <br/>
 
-                {/*<button type="button" onClick={<Link to ="/signup">}>*/}
-                {/*    회원가입*/}
-                {/*</button>*/}
+                <button type="button" onClick={movesignUp}>
+                    회원가입
+                </button>
+
             </form>
         </div>
     )

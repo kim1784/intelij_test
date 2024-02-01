@@ -5,14 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3a8e8f-7c2f-48eb-9e9d-1843a7df8bd2" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/pront_react" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pront_react/src/constants/path.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_nest/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back_nest/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_nest/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back_nest/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pront_react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pront_react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pront_react/src/components/ButtonComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/components/ButtonComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pront_react/src/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pront_react/src/pages/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/pages/signup.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -32,18 +52,34 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/작업/업무/공부/intelij",
+    "last_opened_file_path": "D:/작업/업무/공부/intelij/back_nest",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="intelij" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="intelij" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,12 +89,24 @@
       <option name="presentableId" value="Default" />
       <updated>1706515851025</updated>
       <workItem from="1706515852089" duration="50000" />
-      <workItem from="1706746178799" duration="714000" />
+      <workItem from="1706746178799" duration="6974000" />
+      <workItem from="1706759192126" duration="3073000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />

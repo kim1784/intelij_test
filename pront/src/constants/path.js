@@ -1,0 +1,1 @@
+export const PRI_PATH = "http://localhost:3001/";
