@@ -1,0 +1,30 @@
+.bigButton {
+  @include buttonSize(400px, 45px, 16px);
+}
+
+.mediumButton {
+  @include buttonSize(300px, 65px, 16px);
+}
+
+.smallButton {
+  @include buttonSize(100px, 40px, 14px);
+}
+
+.dark {
+  @include buttonColor($main-grey, $main-white);
+  opacity: 85%;
+
+  &:hover {
+    opacity: 100%;
+    background-color: $main-black;
+  }
+}
+
+.bright {
+  @include buttonColor($main-white, $main-grey);
+  border: 1px solid $main-grey;
+
+  &:hover {
+    @include buttonColor($main-grey, $main-white);
+  }
+}
