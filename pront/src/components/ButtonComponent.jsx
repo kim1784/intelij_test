@@ -1,16 +1,16 @@
-import React from "react";
-import '../styles/Button.scss'
+// import React from "react";
+// import '../styles/Button.scss'
 
-const ButtonComponent= ({ btnUseYN, buttonSize, buttonColor, buttonName, action }) => {
-    return (
-        <button
-            onClick={() => action()}
-            disabled={btnUseYN}
-            className={`${buttonSize} ${buttonColor}`}
-        >
-            {buttonName}
-        </button>
-    );
-}
+// const ButtonComponent= ({ btnUseYN, buttonSize, buttonColor, buttonName, action }) => {
+//     return (
+//         <button
+//             onClick={() => action()}
+//             disabled={btnUseYN}
+//             className={`${buttonSize} ${buttonColor}`}
+//         >
+//             {buttonName}
+//         </button>
+//     );
+// }
 
-export default ButtonComponent;
+// export default ButtonComponent;

@@ -1,17 +1,18 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import LoginComponent from "./pages/login";
-import SignUpComponent from "./pages/signup";
+// import LoginComponent from "./pages/login";
+// import SignUpComponent from "./pages/signup";
+import Main from "./components/Main";
 
 function App() {
   return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Routes>
-            <Route path="/login" element={<LoginComponent />} />
-            <Route path="/signup" element={<SignUpComponent />} />
-            <Route path="/" element={}/>
-        </Routes>
+
+      <BrowserRouter>
+       <Routes>
+            <Route path="/" element = {<Main/>}/>
+       </Routes>
       </BrowserRouter>
   );
 }
-
+//      <Route path="/login" element={<LoginComponent />} />
+//      <Route path="/signup" element={<SignUpComponent />} />
 export default App;

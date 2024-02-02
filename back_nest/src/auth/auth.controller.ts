@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Put, Req } from '@nestjs/common';
+import { Body, Controller, Post, Put, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { UserEntity } from './entities/auth.entity';
 import { Request } from 'express';
@@ -11,14 +11,13 @@ export class AuthController {
   // private readonly logger = new Logger(AuthController.name);
   constructor(private readonly authService: AuthService) {}
 
-  @Get()
-  getHelloWorld(): string {
-    return this.authService.getHelloWorld();
-  }
+  // @Get()
+  // getHelloWorld(): string {
+  //   return this.authService.getHelloWorld();
+  // }
 
   @Post('/signup')
   create(@Body() createUserDto: CreateUserDto) {
-    // this.logger.warn(createUserDto);
     console.log(createUserDto);
     console.log('test');
     return this.authService.create(createUserDto);
@@ -29,6 +28,7 @@ export class AuthController {
     const user = new UserEntity();
     user.id = request.body.id;
     user.pw = request.body.pw;
+    console.log(user);
     return this.authService.login(user);
   }
 

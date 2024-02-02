@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3a8e8f-7c2f-48eb-9e9d-1843a7df8bd2" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/pront_react/src/constants/path.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_nest/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back_nest/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_nest/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back_nest/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pront_react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pront_react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pront_react/src/components/ButtonComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/components/ButtonComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pront_react/src/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pront_react/src/pages/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pront_react/src/pages/signup.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/작업/업무/공부/intelij/back_nest",
+    "last_opened_file_path": "D:/작업/업무/공부/intelij/pront",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,7 +83,17 @@
       <workItem from="1706515852089" duration="50000" />
       <workItem from="1706746178799" duration="6974000" />
       <workItem from="1706759192126" duration="3073000" />
+      <workItem from="1706771223977" duration="476000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <option name="closed" value="true" />
+      <created>1706771517287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706771517287</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
