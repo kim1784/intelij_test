@@ -1,45 +1,32 @@
-import { Body, Controller, Post, Put, Req } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
+import { UsersService } from '../users/users.service';
 import { AuthService } from './auth.service';
-import { UserEntity } from './entities/auth.entity';
-import { Request } from 'express';
-import { CreateUserDto } from './dto/create-user.dto';
-// import { CreateAuthDto } from './dto/create-auth.dto';
-// import { UpdateUserDto } from './dto/update-auth.dto';
 
-@Controller('user')
+
+@Controller('auth')
 export class AuthController {
-  // private readonly logger = new Logger(AuthController.name);
-  constructor(private readonly authService: AuthService) {}
+  constructor(
+    private readonly userService: UsersService,
+    private readonly authService: AuthService,
+  ) {}
 
-  // @Get()
-  // getHelloWorld(): string {
-  //   return this.authService.getHelloWorld();
-  // }
-
-  @Post('/signup')
-  create(@Body() createUserDto: CreateUserDto) {
-    console.log(createUserDto);
-    console.log('test');
-    return this.authService.create(createUserDto);
-  }
-
-  @Put('/login')
-  login(@Req() request: Request) {
-    const user = new UserEntity();
-    user.id = request.body.id;
-    user.pw = request.body.pw;
-    console.log(user);
-    return this.authService.login(user);
-  }
-
+  // @Put('/login')
+  // async login(@Body() data: CreateUserDto, @Res() res: Response) {
+  //   const userData = await this.userService.findOne(data.id);
   //
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateAuthDto: UpdateUserDto) {
-  //   return this.authService.update(+id);
-  // }
+  //   if (!userData) {
+  //     throw new UnprocessableEntityException('해당 계정이 존재하지 않습니다');
+  //   }
   //
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.authService.remove(+id);
+  //   const isAuth = await bcrypt.compare(data.pw, userData.pw);
+  //
+  //   if (!isAuth) {
+  //     throw new UnprocessableEntityException('비밀번호가 일치하지 않습니다');
+  //   }
+  //   this.authService.setRefreshToken({ userData, res });
+  //
+  //   // const jwt = this.authService.getAccessToken({ userData });
+  //
+  //   return res.json(jwt);
   // }
 }
