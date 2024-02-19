@@ -1,7 +1,9 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post, UseGuards, Request } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { AuthService } from './auth.service';
-
+import { LocalAuthGuard } from '../common/auth/jwt.guard';
+import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { JwtTokenDto } from '../common/dto/jwt-token.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -10,23 +12,11 @@ export class AuthController {
     private readonly authService: AuthService,
   ) {}
 
-  // @Put('/login')
-  // async login(@Body() data: CreateUserDto, @Res() res: Response) {
-  //   const userData = await this.userService.findOne(data.id);
-  //
-  //   if (!userData) {
-  //     throw new UnprocessableEntityException('해당 계정이 존재하지 않습니다');
-  //   }
-  //
-  //   const isAuth = await bcrypt.compare(data.pw, userData.pw);
-  //
-  //   if (!isAuth) {
-  //     throw new UnprocessableEntityException('비밀번호가 일치하지 않습니다');
-  //   }
-  //   this.authService.setRefreshToken({ userData, res });
-  //
-  //   // const jwt = this.authService.getAccessToken({ userData });
-  //
-  //   return res.json(jwt);
-  // }
+  @Post('/signin')
+  @UseGuards(LocalAuthGuard)
+  @ApiOperation({ description: '로그인' })
+  @ApiResponse({ status: 200, description: 'Jwt 토큰 발급', type: JwtTokenDto })
+  signin(@Request() req) {
+    return this.authService.signin(req.user);
+  }
 }

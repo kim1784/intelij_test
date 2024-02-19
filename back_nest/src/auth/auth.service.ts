@@ -1,31 +1,34 @@
-import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import * as process from 'process';
+import {
+  BadRequestException,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
+import { UsersService } from '../users/users.service';
+import { UsersEntity } from '../users/entities/users.entity';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    private jwtService: JwtService
-  ) {}
+  constructor(private userService: UsersService) {}
 
-  async getAccessToken({ user }) {
-    return this.jwtService.sign({
-      id: user.id,
-      email : user.email,
-    },
-      {
-      secret: process.env.ACCESS_TOKEN_SECRET_KEY,
-      expiresln: '5m',
-      }
-    );
+  async validateUser(id: string, password: string): Promise<any> {
+    const user = await this.userService.findById(id);
+    if (!user) {
+      throw new UnauthorizedException('가입된 유저가 아닙니다');
+    }
+    if (user && (await bcrypt.compare(password, user.pw))) {
+      delete user.pw;
+      return user;
+    } else {
+      throw new BadRequestException('패스워드 확인이 필요합니다');
+    }
   }
 
-  async setRefreshToken({ user, res }) {
-    const refreshToken = this.jwtService.sign(
-      {
-        id: user.id,
-        sub: user.email,
-      }
-    )
+  async signin(user: UsersEntity) {
+    if (this.validateUser) {
+      user.updated_at = new Date();
+      const signinDateUpdate = this.userService.updateSignin(user);
+      if (signinDateUpdate) return this.createToken(user);
+    }
   }
 }
